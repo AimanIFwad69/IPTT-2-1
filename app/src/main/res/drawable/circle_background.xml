@@ -1,0 +1,8 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Solid background color -->
+    <solid android:color="#A48146" /> <!-- Use your desired color -->
+
+    <!-- Make it a circle -->
+    <size android:width="300dp" android:height="300dp" /> <!-- Match the View's size -->
+    <corners android:radius="200dp" /> <!-- Half of the size to make it a circle -->
+</shape>
