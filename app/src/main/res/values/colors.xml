@@ -4,4 +4,8 @@
     <color name="bright_yellow">#FFD700</color>
     <color name="white">#FFFFFF</color>
     <color name="black">#000000</color>
+    <color name="appblue">#0092F5</color>
+    <color name="password_strength_weak">#FF0000</color> <!-- Red -->
+    <color name="password_strength_moderate">#FFC107</color> <!-- Yellow -->
+    <color name="password_strength_strong">#4CAF50</color> <!-- Green -->
 </resources>

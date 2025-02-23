@@ -1,10 +1,183 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HomePageActivity">
+    android:background="@drawable/img"
+    tools:context=".MainActivity">
+
+    <!-- Time Rectangle -->
+    <View
+        android:id="@+id/time_rectangle"
+        android:layout_width="599dp"
+        android:layout_height="181dp"
+        android:background="@drawable/rounded_corners"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:id="@+id/digital_workbook"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Digital Workbook"
+        android:textSize="18sp"
+        android:textColor="@android:color/white"
+        app:layout_constraintTop_toBottomOf="@id/digital_workbook_rectangle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"/>
+
+
+    <!-- Prayer Title -->
+    <TextView
+        android:id="@+id/prayer_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/lilitaone"
+        android:text="ISYAK"
+        android:textColor="@android:color/holo_orange_light"
+        android:textSize="60dp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"/>
+
+    <!-- Underline -->
+    <View
+        android:id="@+id/digital_workbook_line"
+        android:layout_width="450dp"
+        android:layout_height="5dp"
+        android:background="#95FFBB33"
+        app:layout_constraintTop_toBottomOf="@id/prayer_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="10dp"/>
+
+    <!-- Prayer Time -->
+    <TextView
+        android:id="@+id/prayer_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/lilitaone"
+        android:text="7:43 PM"
+        android:textColor="@android:color/holo_orange_light"
+        android:textSize="70dp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/digital_workbook_line"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="10dp"/>
+
+    <!-- 🔹 Play Audio Button (NEW) -->
+    <Button
+        android:id="@+id/playAudioButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Play Audio"
+        android:padding="12dp"
+        android:textSize="18sp"
+        android:backgroundTint="@android:color/holo_blue_light"
+        android:textColor="@android:color/white"
+        app:layout_constraintTop_toBottomOf="@id/prayer_time"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"/>
+
+    <!-- Digital Workbook Section -->
+    <View
+        android:id="@+id/digital_workbook_rectangle"
+        android:layout_width="350dp"
+        android:layout_height="489dp"
+        android:layout_marginTop="36dp"
+        android:background="@drawable/rounded_buttons"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.209"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/playAudioButton" />
+
+    <ImageView
+        android:id="@+id/prayer_steps_image"
+        android:layout_width="295dp"
+        android:layout_height="303dp"
+        android:layout_marginTop="4dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/prayingicon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.226"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/digital_workbook_rectangle" />
+
+    <!-- Sidebar -->
+    <View
+        android:id="@+id/feedback_rectangle2"
+        android:layout_width="122dp"
+        android:layout_height="800dp"
+        android:background="@drawable/side_bar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <!-- Navigation Icons -->
+    <ImageView
+        android:id="@+id/home_icon"
+        android:layout_width="68dp"
+        android:layout_height="74dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="120dp"
+        android:background="@drawable/homeicon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/profile_icon"
+        android:layout_width="68dp"
+        android:layout_height="74dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/personlogo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/home_icon" />
+
+    <ImageView
+        android:id="@+id/settings_icon"
+        android:layout_width="68dp"
+        android:layout_height="74dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/settingicon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/profile_icon" />
+
+    <ImageView
+        android:id="@+id/search_icon"
+        android:layout_width="68dp"
+        android:layout_height="74dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/searchicon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/settings_icon" />
+
+    <ImageView
+        android:id="@+id/music_icon"
+        android:layout_width="68dp"
+        android:layout_height="74dp"
+        android:background="@drawable/musicicon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="16dp"/>
+
+    <ImageView
+        android:id="@+id/sound_icon"
+        android:layout_width="68dp"
+        android:layout_height="74dp"
+        android:background="@drawable/soundicon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/music_icon"
+        android:layout_marginTop="16dp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

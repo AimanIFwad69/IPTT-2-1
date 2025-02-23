@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "135367504267",
+    "project_id": "fyp-iptt-app",
+    "storage_bucket": "fyp-iptt-app.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:135367504267:android:23d53bb208d43befc63f8e",
+        "android_client_info": {
+          "package_name": "com.example.iptt"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAfHr9N8_UgtiQAJmNGzX7AMwz6D5mG9Bk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

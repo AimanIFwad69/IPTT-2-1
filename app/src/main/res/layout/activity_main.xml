@@ -5,22 +5,21 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16dp"
-    android:background="#80D6BD93">
-
+    android:background="@drawable/img">
 
     <TextView
         android:id="@+id/circle"
         android:layout_width="350dp"
         android:layout_height="350dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="8dp"
         android:background="@drawable/circle_background"
-        android:fontFamily="sans-serif-medium"
+        android:fontFamily="@font/lilitaone"
         android:gravity="center"
-        android:text="SABR SPHERE"
+        android:text="SABR SPHERE LOGO"
         android:textColor="@android:color/black"
         android:textSize="48sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.482"
+        app:layout_constraintHorizontal_bias="0.479"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -28,12 +27,13 @@
         android:id="@+id/username"
         android:layout_width="301dp"
         android:layout_height="70dp"
-        android:layout_marginTop="500dp"
+        android:layout_marginTop="328dp"
         android:background="@drawable/rounded_edittext_background"
         android:hint="Username"
         android:inputType="text"
         android:padding="12dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.499"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -41,7 +41,7 @@
         android:id="@+id/password"
         android:layout_width="301dp"
         android:layout_height="70dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="8dp"
         android:background="@drawable/rounded_edittext_background"
         android:hint="Password"
         android:inputType="textPassword"
@@ -54,15 +54,57 @@
         android:id="@+id/loginButton"
         android:layout_width="190dp"
         android:layout_height="76dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="4dp"
+        android:backgroundTint="@color/appblue"
+        android:fontFamily="@font/lilitaone"
         android:text="Login"
-        android:backgroundTint="#808080"
-        android:textSize="40sp"
         android:textColor="@android:color/black"
-        android:fontFamily="sans-serif-medium"
+        android:textSize="40sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/password" />
+
+    <Button
+        android:id="@+id/signUpButton"
+        android:layout_width="190dp"
+        android:layout_height="76dp"
+        android:layout_marginTop="2dp"
+        android:text="Sign Up"
+        android:backgroundTint="@color/appblue"
+        android:textSize="40sp"
+        android:textColor="@android:color/black"
+        android:fontFamily="@font/lilitaone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/loginButton" />
+
+    <TextView
+        android:id="@+id/statusTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Status: Not logged in"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/signUpButton" />
+
+    <TextView
+        android:id="@+id/forgotPasswordButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:text="Forgot Password?"
+        android:textColor="@color/appblue"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/statusTextView" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
